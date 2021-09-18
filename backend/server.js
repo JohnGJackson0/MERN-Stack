@@ -1,8 +1,9 @@
-//can switch to es6 modules now.
-
-const express = require("express");
-const dotenv = require("dotenv");
-const products = require("./data/products");
+import express from "express";
+import dotenv from "dotenv";
+//for ES6 modules, if it is a file you made in project
+//and in backend / node stack, then it has to have .js
+//extension on it.
+import products from "./data/products.js";
 
 dotenv.config();
 
