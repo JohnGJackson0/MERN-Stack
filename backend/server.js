@@ -3,9 +3,12 @@ import dotenv from "dotenv";
 //for ES6 modules, if it is a file you made in project
 //and in backend / node stack, then it has to have .js
 //extension on it.
+import connectDB from "./config/db.js";
 import products from "./data/products.js";
 
 dotenv.config();
+
+connectDB();
 
 const app = express();
 
