@@ -4,19 +4,18 @@ const users = [
   {
     name: "Admin User",
     email: "admin@example.com",
-    password: bcrypt.hashSync("password", 10),
+    password: bcrypt.hashSync("123456", 10),
     isAdmin: true,
   },
   {
     name: "John Doe",
-    email: "John@example.com",
-    //npm i bcryptjs to hash
-    password: bcrypt.hashSync("password", 10),
+    email: "john@example.com",
+    password: bcrypt.hashSync("123456", 10),
   },
   {
     name: "Jane Doe",
     email: "Jane@example.com",
-    password: bcrypt.hashSync("password", 10),
+    password: bcrypt.hashSync("123456", 10),
   },
 ];
 
