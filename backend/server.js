@@ -4,6 +4,7 @@ import colors from "colors";
 //for ES6 modules, if it is a file you made in project
 //and in backend / node stack, then it has to have .js
 //extension on it.
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 
@@ -18,6 +19,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/products", productRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
